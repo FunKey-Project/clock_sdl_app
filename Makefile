@@ -1,13 +1,13 @@
-PRGNAME     = test.elf
-CC			= gcc
+PRGNAME     := test.elf
+CC			= $(CROSS_COMPILE)gcc
 
 OBJS		= main.o font/font_drawing.o
 
-CFLAGS		= -O0 -g3 -I. -Ifont
+CFLAGS		:= -O0 -g3 -I. -Ifont
 
 CXXFLAGS = $(CFLAGS)
 
-LDFLAGS     =  -lc -lgcc -lm -lSDL
+LDFLAGS     :=  -lc -lgcc -lm -lSDL
 
 
 # Rules to make executable
